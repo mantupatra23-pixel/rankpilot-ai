@@ -40,6 +40,9 @@ from search_index import router as index_router
 from metrics_engine import router as metrics_router
 from workflow_orchestrator import router as workflow_router
 from knowledge_graph import router as graph_router
+from plugin_system import router as plugin_router
+from ai_models import router as model_router
+from marketplace_engine import router as market_router
 
 app = FastAPI(
     title="RankPilot AI",
@@ -81,6 +84,9 @@ app.include_router(index_router)
 app.include_router(metrics_router)
 app.include_router(workflow_router)
 app.include_router(graph_router)
+app.include_router(plugin_router)
+app.include_router(model_router)
+app.include_router(market_router)
 
 # AI SEO Tools
 app.include_router(keyword_router)
