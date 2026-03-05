@@ -30,6 +30,9 @@ from report_generator import router as report_router
 from project_manager import router as project_router
 from team_system import router as team_router
 from notification_system import router as notification_router
+from api_keys import router as api_router
+from usage_tracker import router as usage_router
+from health_check import router as health_router
 
 app = FastAPI(
     title="RankPilot AI",
@@ -61,6 +64,9 @@ app.include_router(report_router)
 app.include_router(project_router)
 app.include_router(team_router)
 app.include_router(notification_router)
+app.include_router(api_router)
+app.include_router(usage_router)
+app.include_router(health_router)
 
 # AI SEO Tools
 app.include_router(keyword_router)
