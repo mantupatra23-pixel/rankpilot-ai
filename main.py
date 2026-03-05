@@ -23,6 +23,8 @@ from master_agent import router as agent_router
 from subscription import router as sub_router
 from crawler_engine import router as crawler_router
 from rank_tracker import router as rank_router
+from keyword_difficulty import router as kd_router
+from backlink_database import router as backlink_db_router
 
 app = FastAPI(
     title="RankPilot AI",
@@ -47,6 +49,8 @@ app.include_router(agent_router)
 app.include_router(sub_router)
 app.include_router(crawler_router)
 app.include_router(rank_router)
+app.include_router(kd_router)
+app.include_router(backlink_db_router)
 
 # AI SEO Tools
 app.include_router(keyword_router)
