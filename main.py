@@ -16,7 +16,7 @@ from autorank_engine import router as autorank_router
 from ai_writer import router as ai_router
 from competitor_engine import router as competitor_router
 from technical_seo import router as technical_router
-
+from strategy_engine import router as strategy_router
 
 
 app = FastAPI(
@@ -35,6 +35,7 @@ app.include_router(autorank_router)
 app.include_router(ai_router)
 app.include_router(competitor_router)
 app.include_router(technical_router)
+app.include_router(strategy_router)
 
 # AI SEO Tools
 app.include_router(keyword_router)
