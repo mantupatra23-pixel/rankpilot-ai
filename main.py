@@ -27,6 +27,9 @@ from keyword_difficulty import router as kd_router
 from backlink_database import router as backlink_db_router
 from content_optimizer import router as optimizer_router
 from report_generator import router as report_router
+from project_manager import router as project_router
+from team_system import router as team_router
+from notification_system import router as notification_router
 
 app = FastAPI(
     title="RankPilot AI",
@@ -55,6 +58,9 @@ app.include_router(kd_router)
 app.include_router(backlink_db_router)
 app.include_router(optimizer_router)
 app.include_router(report_router)
+app.include_router(project_router)
+app.include_router(team_router)
+app.include_router(notification_router)
 
 # AI SEO Tools
 app.include_router(keyword_router)
