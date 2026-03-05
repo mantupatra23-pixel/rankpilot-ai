@@ -45,6 +45,7 @@ from ai_models import router as model_router
 from marketplace_engine import router as market_router
 from seo_autopilot import router as autopilot_router
 from auto_seo_bot import router as auto_seo_router
+from auto_traffic_engine import router as traffic_router
 
 app = FastAPI(
     title="RankPilot AI",
@@ -91,6 +92,7 @@ app.include_router(model_router)
 app.include_router(market_router)
 app.include_router(autopilot_router)
 app.include_router(auto_seo_router)
+app.include_router(traffic_router)
 
 # AI SEO Tools
 app.include_router(keyword_router)
