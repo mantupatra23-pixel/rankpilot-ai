@@ -47,6 +47,7 @@ from seo_autopilot import router as autopilot_router
 from auto_seo_bot import router as auto_seo_router
 from auto_traffic_engine import router as traffic_router
 from content_scheduler import router as scheduler_router
+from dashboard_api import router as dashboard_router
 
 app = FastAPI(
     title="RankPilot AI",
@@ -95,6 +96,7 @@ app.include_router(autopilot_router)
 app.include_router(auto_seo_router)
 app.include_router(traffic_router)
 app.include_router(scheduler_router)
+app.include_router(dashboard_router)
 
 # AI SEO Tools
 app.include_router(keyword_router)
