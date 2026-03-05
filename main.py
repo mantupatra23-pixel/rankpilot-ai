@@ -35,6 +35,9 @@ from usage_tracker import router as usage_router
 from health_check import router as health_router
 from distributed_worker import router as worker_router
 from data_storage import router as storage_router
+from decision_engine import router as decision_router
+from search_index import router as index_router
+from metrics_engine import router as metrics_router
 
 app = FastAPI(
     title="RankPilot AI",
@@ -71,6 +74,9 @@ app.include_router(usage_router)
 app.include_router(health_router)
 app.include_router(worker_router)
 app.include_router(storage_router)
+app.include_router(decision_router)
+app.include_router(index_router)
+app.include_router(metrics_router)
 
 # AI SEO Tools
 app.include_router(keyword_router)
